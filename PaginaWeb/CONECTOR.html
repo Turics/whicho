@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ViajaYA! - Agencia de Viajes</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="icon" href="./asett/icono.ico">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>ViajaYA!</h1>
+            <div class="slogan-box">
+                <span>✈️No Llegues Tarde</span>
+            </div>
+            <img src="asett/logo2.png" alt="Logo de ViajaYA!" class="logo-img" />
+        </div>
+        <div class="auth-buttons">
+            <?php if($usuarioLogueado): ?>
+                <div class="user-welcome">
+                    <span>Bienvenido, <?php echo htmlspecialchars($nombreUsuario); ?></span>
+                    <a href="logout.php" class="btn-logout">Cerrar sesión</a>
+                </div>
+            <?php else: ?>
+                <a href="session.php" class="btn-login">Iniciar Sesión</a>
+                <a href="registro.php" class="btn-register">Registrarse</a>
+            <?php endif; ?>
+        </div>
+    </header>
+
+    <main>
+        <div class="info">
+            <section class="interest-sites">
+                <div class="boxtitle"><h2>Sitios de Interés</h2></div>
+                <div class="categories">
+                    <div class="category">
+                        <h3>Lugares</h3>
+                        <p>Descubre destinos increíbles.</p>
+                    </div>
+                    <div class="category">
+                        <h3>Hospedaje</h3>
+                        <p>Hoteles y resorts para todos los gustos.</p>
+                    </div>
+                    <div class="category">
+                        <h3>Turismo</h3>
+                        <p>Experiencias únicas.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+            <div>
+            <section class="travel-methods">
+                <div class="boxtitle"><h2>Formas de Viajar</h2></div>
+                <div class="transport-types">
+                    <div class="type">
+                        <h3>Terrestres</h3>
+                        <ul>
+                            <li><h4>Autos/Taxis</h4></li>
+                            <li><h4>Autobuses</h4></li>
+                            <li><h4>Camionetas Turísticas</h4></li>
+                        </ul>
+                    </div>
+                    <div class="type">
+                        <h3>Marítimos</h3>
+                        <ul>
+                            <li><h4>Barcos</h4></li>
+                            <li><h4>Lanchas</h4></li>
+                            <li><h4>Ferris</h4></li>
+                            <li><h4>Cruceros</h4></li>
+                        </ul>
+                    </div>
+                    <div class="type">
+                        <h3>Aéreos</h3>
+                        <ul>
+                            <li><h4>Aviones</h4></li>
+                            <li><h4>Avionetas</h4></li>
+                            <li><h4>Jets Privados</h4></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            </div>
+        
+        <section class="about-agency">
+            <div class="boxtitle"><h2>Sobre ViajaYA!</h2></div>
+            <div class="agency-description">
+                <p>✈️ ViajaYA! – Tu puerta al mundo<br>
+                Diseñamos experiencias únicas, porque cada viaje es una historia por contar.</p>
+                
+                <p>En ViajaYA! nos apasiona convertir tus sueños de viaje en realidad. Con más de 10 años de experiencia en el sector turístico, nos enorgullece ofrecer servicios personalizados que combinan calidad, seguridad y los mejores precios para que explores destinos increíbles sin preocupaciones.</p>
+
+                <p>¿Por qué elegirnos?</p>
+                <div class="benefits-container">
+                    <div class="benefit-column">
+                        <div class="benefit-item">
+                            <span class="checkmark">✅</span>
+                            <p> Expertos disponibles 24/7: Nuestro equipo especializado te asesora en cada paso, desde la planificación hasta tu regreso.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="checkmark">✅</span>
+                            <p>Todo en un solo lugar: Vuelos, hoteles, tours exclusivos y traslados terrestres, aéreos o marítimos.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-column">
+                        <div class="benefit-item">
+                            <span class="checkmark">✅</span>
+                            <p>Seguridad garantizada: Flota moderna y personal capacitado para brindarte tranquilidad en cada trayecto.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="checkmark">✅</span>
+                            <p> Flexibilidad y confianza: Opciones adaptables a tus necesidades y presupuesto, con respaldo de garantías claras.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p>Más que una agencia, somos tus aliados de aventura.<br>
+                Nacionales | Internacionales | Grupos | Viajes corporativos | Lunas de miel, Etc...</p>
+                
+                <p>Contáctanos hoy y comienza a escribir tu próxima aventura.</p>
+                <button class="learn-more">Conoce más</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact">
+                <h2>Contáctanos</h2>
+                <p>Email: luisangelbravo29@gmail.com</p>
+                <div class="telef">
+                    <p>Teléfonos:</p>
+                    <p>+58 412-0654272</p>
+                    <p>+58 412-4340046</p>
+                    <p>+58 412-4790621</p>
+                </div>
+            </div>
+            <div class="social-media">
+                <h2>Síguenos</h2>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">X (Twitter)</a>
+                <a href="#">Telegram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

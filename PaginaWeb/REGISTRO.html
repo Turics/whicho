@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro - ViajaYA!</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="auth-container">
+      
+        <h2>Crear Cuenta</h2>
+        <?php if (isset($_GET['error'])): ?>
+            <div class="error-message">Error en el registro. Intente nuevamente.</div>
+        <?php endif; ?>
+        <form action="procesar_registro.php" method="post">
+            <li>
+                <ul><input type="text" name="nombre" placeholder="Nombre completo" required></ul>
+                <ul><input type="email" name="email" placeholder="Correo electrónico" required></ul>
+                <ul><input type="password" name="password" placeholder="Contraseña" required></ul>
+            </li>
+            <button type="submit" class="btn-auth">Registrarse</button>
+        </form>
+        <p>¿Ya tienes cuenta? <a href="login.php">Inicia sesión aquí</a></p>
+
+    </div>
+</body>
+</html>
